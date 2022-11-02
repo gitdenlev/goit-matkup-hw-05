@@ -479,8 +479,9 @@ main {
   padding-top: 94px;
 }
 
-.project-item {
-  position: relative;
+.project-item:hover .definition-text{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .project-list {
@@ -518,10 +519,13 @@ main {
   overflow: hidden;
   width: 370px;
   height: 294px;
+
 }
 
 .project-definition:hover::before,
-.definition-text:hover {}
+.definition-text:hover {
+
+}
 
 .definition-text {
   position: absolute;
@@ -535,6 +539,8 @@ main {
   opacity: 0;
   width: 100%;
   height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
 }
 
 
