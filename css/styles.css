@@ -108,6 +108,7 @@ ul {
 .header-link:focus,
 .current:visited {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current::after,
@@ -120,6 +121,7 @@ ul {
   background-color: var(--accent-color);
   border-radius: 2px;
   position: absolute;
+  margin-top: 28px;
 }
 
 .word-studio-1 {
@@ -160,6 +162,7 @@ ul {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-------------------hero-------------------*/
@@ -207,8 +210,12 @@ ul {
   border-radius: 4px;
 }
 
-.banner-button:hover {
-  background: var(--button-active);
+.banner-button:hover,:focus {
+  background-color: var(--button-active);
+  transition: background-color 250ms cubic-bezier(0.4,
+    0,
+    0.2,
+    1);
 }
 
 .hero-item {
@@ -277,12 +284,14 @@ ul {
 
 .project-link {
   display: block;
+ 
 }
 
 .project-link:hover,
 :focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-card {
@@ -379,6 +388,8 @@ ul {
 .team-soc-link:focus {
   background-color: var(--accent-color);
   fill: var(--white-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partners-list {
@@ -400,6 +411,8 @@ ul {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition-duration: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
 }
 
 .partners-icon {
@@ -409,11 +422,13 @@ ul {
 .partners-link:hover,
 .partners-link:focus {
   border-color: var(--accent-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partners-link:hover .partners-icon,
 .partners-link:focus .partners-icon {
   fill: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*------------------- portfolio -------------------*/
@@ -455,6 +470,11 @@ main {
   display: block;
   padding: 6px 22px;
   border-radius: 4px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
 }
 
 .filter-btn:hover,
@@ -464,14 +484,9 @@ main {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.btn-title {
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project {
@@ -524,7 +539,8 @@ main {
 
 .project-definition:hover::before,
 .definition-text:hover {
-
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .definition-text {
@@ -585,6 +601,7 @@ footer {
 .footer-contact-link:hover,
 .footer-contact-link:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adds {
@@ -596,6 +613,7 @@ footer {
 .adds:hover,
 .adds:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-networks {}
@@ -636,6 +654,8 @@ footer {
 .footer-soc-link:focus {
   background-color: var(--accent-color);
   fill: var(--white-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Модальне вікно */
